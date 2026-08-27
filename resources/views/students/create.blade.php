@@ -67,7 +67,7 @@
             </div>
             <div class="field">
                 <label for="mobile_number">Mobile Number <span>*</span></label>
-                <input id="mobile_number" name="mobile_number" value="{{ old('mobile_number') }}" placeholder="09171234567" inputmode="numeric" pattern="09[0-9]{9}" maxlength="11" required>
+                <input id="mobile_number" type="tel" name="mobile_number" value="{{ old('mobile_number') }}" placeholder="09171234567" inputmode="numeric" pattern="09[0-9]{9}" maxlength="11" required oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,11)">
                 @error('mobile_number')<small>{{ $message }}</small>@enderror
             </div>
         </div>

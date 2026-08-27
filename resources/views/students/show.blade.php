@@ -33,7 +33,7 @@
             <div><span>Date of Birth</span><strong>{{ $student->date_of_birth->format('F d, Y') }}</strong></div>
             <div><span>Gender</span><strong>{{ $student->gender }}</strong></div>
             <div><span>Year Level</span><strong>{{ $student->year_level }}</strong></div>
-            <div><span>Registered</span><strong>{{ $student->created_at->format('M d, Y &ndash; h:i A') }}</strong></div>
+            <div><span>Registered</span><strong>{{ $student->created_at->format('M d, Y') }} &ndash; {{ $student->created_at->format('h:i A') }}</strong></div>
             <div class="full"><span>Address</span><strong>{{ $student->address }}</strong></div>
         </div>
     </div>
